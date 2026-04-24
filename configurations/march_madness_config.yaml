@@ -1,0 +1,52 @@
+# =============================================================================
+# DATASET CONFIG: Student Depression Dataset
+# =============================================================================
+
+DATA_PATH: "datasets/march_madness_dataset.csv"
+TARGET_COLUMN: "y"
+TARGET_ENCODING: null
+
+# Optional row filter — set both to null to skip
+FILTER_COLUMN: null
+FILTER_VALUE: null
+
+# Columns to drop before modelling
+DROP_COLUMNS:
+  - "TeamA"
+  - "TeamB"
+
+# Columns to exclude specific values from
+EXCLUDE_CATEGORY_VALUES: null
+
+# Ordinal mappings for ordered categoricals
+ORDINAL_MAPPINGS: null
+
+# Interaction terms
+INTERACTION_TERMS: null
+
+# Feature groups
+NUMERIC_FEATURES:
+  - "AdjOE_diff"
+  - "AdjDE_diff"
+  - "EFG%_diff"
+  - "EFGD%_diff"
+  - "TOR_diff"
+  - "TORD_diff"
+  - "ORB_diff"
+  - "DRB_diff"
+  - "ADJ T_diff"
+  - "WAB_diff"
+
+CATEGORICAL_FEATURES: []
+
+TEST_SET_FRACTION: 0.2
+
+# Threshold strategy for sparse LR
+THRESHOLD_STRATEGY: null
+THRESHOLD_TARGET: null
+
+PCA_SAMPLE: 1000
+
+GAM_SMOOTH_COUNT: 10
+SVM_SAMPLE: 0.25
+SEED: 42
