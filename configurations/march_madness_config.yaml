@@ -1,5 +1,5 @@
 # =============================================================================
-# DATASET CONFIG: Student Depression Dataset
+# DATASET CONFIG: March Madness Dataset
 # =============================================================================
 
 DATA_PATH: "datasets/march_madness_dataset.csv"

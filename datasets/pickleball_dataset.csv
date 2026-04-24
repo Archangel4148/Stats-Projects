@@ -1,0 +1,4 @@
+Timestamp,Email Address,Date,Day of the Week,Time (Hourly),Number of Groups (Don't include your own group!),Number of People (Don't include your own people!),Temperature,Weather,"Wind Level (0=none, 1=light breeze, 2=wind affecting ball, 3=strong gusts)"
+4/24/2026 15:30:29,joshuasanty100@gmail.com,4/19/2026,Sunday,6:00:00 PM,8,35,65,Sunny,1
+4/24/2026 15:31:13,joshuasanty100@gmail.com,4/23/2026,Thursday,3:00:00 PM,3,7,80,Partly Cloudy,2
+4/24/2026 15:31:53,joshuasanty100@gmail.com,4/23/2026,Thursday,5:00:00 PM,4,10,80,Partly Cloudy,2

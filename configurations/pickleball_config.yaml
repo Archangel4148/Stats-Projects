@@ -1,0 +1,49 @@
+# =============================================================================
+# DATASET CONFIG: Pickleball Data
+# =============================================================================
+
+DATA_PATH: "datasets/pickleball_dataset.csv"
+TARGET_COLUMN: "Number of Groups (Don't include your own group!)"
+TARGET_ENCODING: null
+
+# Optional row filter — set both to null to skip
+FILTER_COLUMN: null
+FILTER_VALUE: null
+
+# Columns to drop before modelling (IDs, leaky columns, high missingness)
+DROP_COLUMNS:
+  - "Timestamp"
+  - "Email Address"
+  - "Date"
+  - "Number of People (Don't include your own people!)"
+
+# Columns to exclude specific values from
+EXCLUDE_CATEGORY_VALUES: null
+
+ORDINAL_MAPPINGS: null
+
+# Interaction terms
+INTERACTION_TERMS: null
+
+# Feature groups
+NUMERIC_FEATURES:
+  - "Temperature"
+  - "Wind Level (0=none, 1=light breeze, 2=wind affecting ball, 3=strong gusts)"
+
+CATEGORICAL_FEATURES:
+  - "Weather"
+  - "Day of the Week"
+
+TEST_SET_FRACTION: 0.2
+
+# Default threshold (0.5) for all models including sparse LR
+THRESHOLD_STRATEGY: null
+THRESHOLD_TARGET: null
+
+GAM_SMOOTH_COUNT: 1
+
+PCA_SAMPLE: null
+
+SVM_SAMPLE: 1.0
+
+SEED: 42
