@@ -1,0 +1,68 @@
+# =============================================================================
+# DATASET CONFIG: Student Depression Dataset
+# =============================================================================
+
+DATA_PATH: "datasets/student_depression_dataset.csv"
+TARGET_COLUMN: "Depression"
+TARGET_ENCODING: null
+
+# Optional row filter — set both to null to skip
+FILTER_COLUMN: "Profession"
+FILTER_VALUE: "Student"
+
+# Columns to drop before modelling
+DROP_COLUMNS:
+  - "id"
+  - "City"
+  - "Profession"
+  - "Work Pressure"
+  - "Job Satisfaction"
+
+# Columns to exclude specific values from
+EXCLUDE_CATEGORY_VALUES:
+  Sleep Duration:
+    - "Others"
+  Dietary Habits:
+    - "Others"
+
+# Ordinal mappings for ordered categoricals
+ORDINAL_MAPPINGS:
+  Sleep Duration:
+    Less than 5 hours: 1
+    5-6 hours: 2
+    7-8 hours: 3
+    More than 8 hours: 4
+
+# Interaction terms
+INTERACTION_TERMS:
+  - ["Academic Pressure", "Sleep Duration"]
+  - ["Academic Pressure", "Financial Stress"]
+  - ["Financial Stress", "Sleep Duration"]
+  - ["Academic Pressure", "Study Satisfaction"]
+
+# Feature groups
+NUMERIC_FEATURES:
+  - "Age"
+  - "Academic Pressure"
+  - "CGPA"
+  - "Study Satisfaction"
+  - "Work/Study Hours"
+  - "Financial Stress"
+
+CATEGORICAL_FEATURES:
+  - "Gender"
+  - "Sleep Duration"
+  - "Dietary Habits"
+  - "Degree"
+  - "Have you ever had suicidal thoughts ?"
+  - "Family History of Mental Illness"
+
+TEST_SET_FRACTION: 0.2
+
+# Threshold strategy for sparse LR
+THRESHOLD_STRATEGY: "recall"
+THRESHOLD_TARGET: 0.90
+
+GAM_SMOOTH_COUNT: 10
+SVM_SAMPLE: 0.25
+SEED: 42
